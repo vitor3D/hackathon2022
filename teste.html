@@ -8,6 +8,8 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Exo+2:wght@100&family=Ms+Madi&family=VT323&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Press+Start+2P&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
         /*
         font-family: 'Bangers', cursive;
@@ -15,7 +17,30 @@
         font-family: 'Ms Madi', cursive;
         font-family: 'VT323', monospace;
         font-family: 'Press Start 2P', cursive;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Courgette', cursive;
         */
+            /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px rgb(0, 0, 0); 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0); 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4b4b4b; 
+}
 
         * {
       margin: 0;
@@ -23,42 +48,95 @@
       box-sizing: border-box;
         }
         html{
-            color: black;
+            color: rgba(255, 255, 255, 0);
             font-size: 50px;
             letter-spacing: 3px;
 
         }
+        h3{
+            margin-left: 50px;
+            text-decoration: underline;
+        }
+
+        .button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: solid 1px rgb(255, 255, 255);
+
+    border-radius: 20px;
+    padding-left: 13px;
+    padding-right:10px;
+    padding-top: 5px;
+
+    transition: 0.3s;
+    width: 100px;
+    font-size: 10px;
+
+    text-decoration: none;
+}
+
+.button:hover{
+    color: white;
+    background-color: black;
+    border: solid 1px purple;
+}
         .inicio{
             display: flex;
             justify-content: center;
 
             height: 100px;
+
+            font-family: 'Poppins', sans-serif;
+
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        	background-size: 400% 400%;
+        	animation: gradient 15s ease infinite;   
+        
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+
         }
+
+        @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
         .cor1{
             font-family: 'Press Start 2P', cursive;
             background-color: rgb(0, 0, 0);
             color: rgb(21, 251, 0);
 
-            margin: 0px;
+            padding-left:50px ;
+            padding-top: 50px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            
 
-            height: 1000px;
+            height: 5200px;
             font-size: 25px;
             line-height: 1.5;
         }
         .cor2{
             color: white;
 
-            font-size: 50px;
+            font-size: 45px;
             margin: 0px;
-            height: 1250px;
+            height: 1950px;
             display: flex;
             justify-content: center;
 
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(http://abmosk.ru/content/image/2021/news-12-11-2021-1/0.jpg);
 
-            font-family: 'Ms Madi', cursive;
+            font-family: 'Courgette', cursive;
 
             background-color: #000;
             background-repeat: no-repeat, no-repeat;
@@ -70,64 +148,121 @@
             height: 800px;
             display: flex;
             justify-content: center;
+            font-size: 45px;
+
 
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #000;
 
-            background-image: url(https://wallpapercave.com/wp/wp3660106.jpg);
-            background-repeat: no-repeat, no-repeat;
-            background-position: right, left; 
+            background-image: url(https://wallpaperaccess.com/full/1205458.jpg);
+           
+            background-position: center; 
             
 
             font-family: 'VT323', monospace; 
         }
-        p{
-            margin: 10px;
+        .video{
+            color: white;
+
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+
+            background-image: url(https://wallpaperaccess.com/full/1205458.jpg);
+            background-position: center; 
+            background-color: #000;
+            background-repeat: no-repeat, no-repeat;
+            background-position: right, left; 
+
+            font-family: 'VT323', monospace; 
+            
+            border-left: 500px;
+            text-align: center;
+            
+            
         }
+        .programas{
+            display: flex;
+            border-radius: 50px;
+            width: 700px;
+            height: 900px;
+            padding: 20px;
+            margin-left: 10rem;
+
+            border: solid 1px rgb(0, 255, 21);
+        }
+
     </style>
+        <link rel="icon" type="image/x-icon" href="img/tentativa_4">
 </head>
 <body>
-    <div class="inicio">Qual curso você mais se indentifica?</div>
+    <div class="inicio">Qual curso você mais se identifica?</div>
     <div class="cor1">
-        <h3>Des </h3>
-        <br><br>
+        <a href="index.html" class="button"><p>VOLTAR</p></a><br><br>
+       <p> <h3>Des </h3>
+        <br><br> 
         <p>Técnico em Desenvolvimento de Sistemas
-
-O Ensino Médio Integrado oferece aos alunos todo o conhecimento da base nacional comum do ensino médio e a Educação Profissional, unindo a formação básica com a formação técnica.<br>
-<br>
-Eixo Tecnológico: Informação e Comunicação<br>
-<br>
-TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS é o profissional que desenvolve sistemas computacionais utilizando ambiente de desenvolvimento. Modela, implementa e mantém banco de dados. Utiliza linguagem de programação específica. Realiza testes de programas de computador. Mantém registros para análise e refinamento de resultados. Elabora documentação do sistema. Aplica princípios e definição de análise de dados. Executa manutenção de programas de computador.<br>
-<br>
-Mercado de trabalho<br>
-<br>
-Empresas e departamentos de desenvolvimento de sistemas em organizações governamentais e não governamentais, podendo também atuar como profissional autônomo.<br>
+        <br><br>
+        Nesse curso você aprenderá a criar e analisar sistemas. Construindo, documentando, modelando, implementando e mantendo bancos de dados, realizando testes e mantendo sistemas de informação. 
+        <br>
+        Além de utilizar ambientes de desenvolvimento e linguagens de programação específicas. 
+HTML, CSS, JavaScript, C#, C++, PHP e SQL são algumas linguagens de programação que você aprenderá neste curso. . .
     </p>
+    <br>
+    <img src=".//img/html.jpg" class="programas" alt="" srcset=""><br>
+    <img src=".//img/css.jpg" class="programas" alt="" srcset=""><br>
+    <img src=".//img/js.jpg" class="programas" alt="" srcset=""><br>
+    <img src=".//img/csharp.jpg" class="programas" alt="" srcset=""><br>
+    <img src=".//img/mysql.jpg" class="programas" alt="" srcset=""><br>
+    <img src=".//img/php.jpg" class="programas" alt="" srcset=""><br>
+    
+
+
 </div>
     <div class="cor2">
-        <h3>Mad </h3>
+       <p><h3>Mad </h3>
         <br><br>
         Administração<br>
         <br>
-O Ensino Médio Integrado oferece aos alunos todo o conhecimento da base nacional comum do ensino médio e a Educação Profissional, unindo a formação básica com a formação técnica.<br>
-<br>
-Eixo Tecnológico: Gestão e Negócios
-<br>
-Adota postura ética na execução da rotina administrativa, na elaboração do planejamento da produção e materiais, recursos humanos, financeiros e mercadológicos. Realiza atividades de controles e auxilia nos processos de direção utilizando ferramentas da informática básica. Fomenta ideias e práticas empreendedoras.<br>
-<br>
-Mercado de trabalho
-<br>
-Áreas da Indústria, Comércio, Prestação de Serviços, em empresas em geral de pequeno e médio portes.<br>
+        No curso de administração os alunos adquirem habilidades ganhando referencias de como administrar e gerenciar seu negócio/empresa ou até mesmo, como criar uma. Dentro dessas habilidades temos: gerenciamento de recursos humanos, controle de rotina financeira e econômica, planejamento de produção de materiais e programação de logística empresarial, negociação internacional e outros.
+Um dos principais componentes aprendidos no curso é a criação do plano de negócios, um documento que descreve por escrito os objetivos de um negócio e quais passos devem ser dados para que esses objetivos sejam alcançados, diminuindo os riscos e as incertezas. Um plano de negócio permite identificar e restringir seus erros no papel, ao invés de cometê-los no mercado.
+<br><br>
+Como fazer um plano de negócios:
+Aprenda a seguir, como criar um plano de negócios básico. Um plano de negócios consistente para sua empresa, deve ter pelo menos as seguintes etapas: 
+<br><br>
+
+1. Sumário executivo
+<br><br>
+2. Análise de Mercado
+<br><br>
+3. Análise da concorrência
+<br><br>
+4. Análise de fornecedores
+<br><br>
+5. Plano de marketing
+<br><br>
+6. Plano operacional
+<br><br>
+7. Plano Financeiro
+</p>
     </div>
     <div class="cor3">
        <p> <h3>JODI</h3>
         <br><br>
-        Ensino médio com habilitação profissional de técnico em programação de jogos digitais<br>
+        Ensino médio com habilitação profissional<br> de técnico em programação de jogos digitais<br>
         <br>
-Eixo Tecnológico: Informação e Comunicação<br>
-<br>
-A organização curricular do ENSINO MÉDIO COM HABILITAÇÃO PROFISSIONAL DE TÉCNICO EM PROGRAMAÇÃO DE JOGOS DIGITAIS está de acordo com o Eixo Tecnológico “Informação e Comunicação” e estruturada em séries articuladas, com terminalidade correspondente à qualificação profissional de nível técnico identificada no mercado de trabalho.<br>
+        <br>No curso de jogos digitais, os alunos adquirem habilidades de criar, projetar, desenvolver, implementar e vender jogos digitais.<br>
+Um profissional dessa área tem como capacidades:<br><br>
+- Codificar programas, desenvolver e editar elementos sonoros e gráficos em duas e três dimensões;<br>
+- Planejar e desenvolver ações de marketing e divulgação;<br>
+- Selecionar recursos de trabalho, linguagens de programação, ferramentas e metodologias para o desenvolvimento de jogos digitais em diversas mídias, tais como: consoles, microcomputadores, dispositivos móveis e Internet.<br>
    </p> 
 </div>    
+<div class="video">
+ <p> A seguir você terá uma breve apresentação de como criar uma animação feita por um aluno deste curso:</p> 
+    <video width="1280" height="960"  autoplay="autoplay" loop>
+    <source src=".//img/sitema2.mp4" type="video/mp4">
+
+</div>
+
 </body>
 </html>
